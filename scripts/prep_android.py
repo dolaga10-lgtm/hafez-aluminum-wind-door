@@ -7,7 +7,7 @@ for d, n in {'mipmap-mdpi':48,'mipmap-hdpi':72,'mipmap-xhdpi':96,'mipmap-xxhdpi'
     for name in ('ic_launcher.png','ic_launcher_round.png','ic_launcher_foreground.png'):
         src.resize((n,n), Image.LANCZOS).save(os.path.join(p, name))
 shutil.rmtree(os.path.join(res,'mipmap-anydpi-v26'), ignore_errors=True)
-d = 'android/app/src/main/java/com.hafez.aluminum'; os.makedirs(d, exist_ok=True)
+d = 'android/app/src/main/java/com/hafez/aluminum'; os.makedirs(d, exist_ok=True)
 open(os.path.join(d,'MainActivity.java'),'w').write('''package com.hafez.aluminum;
 import android.os.Bundle;
 import android.view.WindowManager;
